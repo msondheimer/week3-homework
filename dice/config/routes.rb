@@ -1,6 +1,8 @@
 Dice::Application.routes.draw do
 
-  get("/welcome", { :controller => "welcome", :action => "show_title"})
+  get("/welcome", { :controller => "dicegame", :action => "show_title"})
+  #get("/dicegamefirstroll", { :controller => "dicegamefirstroll", :action => "show_dice1"})
+  get("/dicegamefirst", { :controller => "dicegame", :action => "show_dice_first"})
   get("/dicegame", { :controller => "dicegame", :action => "show_dice"})
 
 

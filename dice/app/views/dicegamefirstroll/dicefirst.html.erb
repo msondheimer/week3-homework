@@ -4,13 +4,15 @@
 	<img src="https://uchicago.s3.amazonaws.com/d0<%= die%>.png" width="100" height="100">
 <% end %>
 
-<p>Sum DICEGAME <%= @sum%></p>
+<p>Sum DICEFIRST <%= @sum%></p>
 <%= @winlose%>
-<p>Your goal is <%= $goal%></p>
+<p>Your goal is <%= @goal%></p>
 
-<form method="routes.rb" controller: "dicegame" action:"show_dice">
+
+<form method="routes.rb" controller= "dicegame" action:"show_dice" definition:"dicegame">
 <input type="submit" name="button1"  value="Roll the dice">
 </form>
+
 
 
 
