@@ -1,0 +1,12 @@
+<h1>Dice Game</h1>
+
+<% @dice.each do |die|%>
+	<img src="https://uchicago.s3.amazonaws.com/d0<%= die%>.png" width="100" height="100">
+<% end %>
+
+<p>Sum <%= @sum%></p>
+<%= @winlose%>
+<p>Your goal is <%= @goal%></p>
+
+
+
