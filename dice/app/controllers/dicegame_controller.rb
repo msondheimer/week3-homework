@@ -30,7 +30,14 @@ class DicegameController < ApplicationController
       $goal = @sum
     end
 
-    render "dicefirst"
+   # render "dicefirst"
+      if @winlose=="You win!" or @winlose =="You lose!"
+        render "dicewinlose"
+      else
+        render "dicefirst"
+      end
+
+
   end
 
   def show_dice
@@ -49,14 +56,14 @@ class DicegameController < ApplicationController
 
     if @sum != 7
       if @sum==$goal
-        @winlose = "win"
+        @winlose = "You win!"
     else
-      @winlose = "lose"
+      @winlose = "You lose!"
     end
   end
 
 
-    if @winlose=="win" or @winlose =="lose"
+    if @winlose=="You win!" or @winlose =="You lose!"
       render "dicewinlose"
     else
       render "dice"
