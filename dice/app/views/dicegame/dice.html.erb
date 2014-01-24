@@ -9,6 +9,6 @@
 <p>Your goal is <%= $goal%></p>
 
 <form method="routes.rb" controller: "dicegame" action:"show_dice">
-<input type="submit" name="button1"  value="Roll the dice">
+<input type="submit" name="goal<%= $goal%>"  value="Roll the dice">
 </form>
 
