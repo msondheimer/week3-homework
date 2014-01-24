@@ -1,14 +1,16 @@
+<body>
 <h1>Dice Game</h1>
 
 <% @dice.each do |die|%>
 	<img src="https://uchicago.s3.amazonaws.com/d0<%= die%>.png" width="100" height="100">
 <% end %>
 
-<p>Sum DICEGAME <%= @sum%></p>
-<%= @winlose%>
-<p>Your goal is <%= $goal%></p>
+<p>GOAL <%= @goal%></p>
+<p>SUM <%= @sum%></p>
+<p>Continue, your goal is still <%= @goal%></p>
 
-<form method="routes.rb" controller: "dicegame" action:"show_dice">
-<input type="submit" name="goal<%= $goal%>"  value="Roll the dice">
+<form method="routes.rb" action="dicegame" params= '@goal'>
+<input type="submit" text = "Roll Again">
+<input type="hidden" name="goal" value = "<%= @goal %>" hidden = yes>
 </form>
-
+</body>

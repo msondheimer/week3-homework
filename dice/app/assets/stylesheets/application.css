@@ -1,3 +1,12 @@
+h1 {color: black;
+	font-size: 36px;
+	border-bottom: solid;}
+
+body{font-family: 'Arial'}
+
+
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

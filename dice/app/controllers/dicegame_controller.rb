@@ -5,7 +5,7 @@ class DicegameController < ApplicationController
   end
 
   def show_dice_first
-    die =[1,2,3,4,5,6]
+    die =[rand(1..6), rand(1..6), rand(1..6), rand(1..6), rand(1..6), rand(1..6)]
     number_of_dice = params["number"]
 
      if number_of_dice == nil
@@ -27,10 +27,9 @@ class DicegameController < ApplicationController
       end 
 
     else
-      $goal = @sum
+      @goal = @sum
     end
 
-   # render "dicefirst"
       if @winlose=="You win!" or @winlose =="You lose!"
         render "dicewinlose"
       else
@@ -41,23 +40,28 @@ class DicegameController < ApplicationController
   end
 
   def show_dice
-    #die =[1,2,3,4,5,6]
+    
     die =[rand(1..6), rand(1..6), rand(1..6), rand(1..6), rand(1..6), rand(1..6)]
-    number_of_dice = params["number"]
+    # number_of_dice = params["number"]
 
-    if number_of_dice == nil
-       number_of_dice = 2
-    end
+    # if number_of_dice == nil
+    #    number_of_dice = 2
+    # end
 
-    @dice = die.sample(number_of_dice.to_i)
+    # @dice = die.sample(number_of_dice.to_i)
+    #die=[rand(1..6)],rand(1..6)]
+    @dice = die.sample(2.to_i)
 
     @sum=@dice.sum
 
+   
+    @goal =  params['goal']
 
     if @sum != 7
-      if @sum==$goal
+      if @sum==@goal
         @winlose = "You win!"
-    else
+      end
+    else if @sum==7
       @winlose = "You lose!"
     end
   end
