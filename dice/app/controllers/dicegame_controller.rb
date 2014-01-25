@@ -18,19 +18,19 @@ class DicegameController < ApplicationController
 
     if @sum==7 or @sum==11 or @sum==2 or @sum==3 or @sum==12
       if @sum==7 or @sum==11
-        @winlose = "You win!"
+        @winlose = "YOU WIN!"
     
       end 
 
       if @sum==2 or @sum==3 or @sum==12
-        @winlose = "You lose!"
+        @winlose = "YOU LOSE."
       end 
 
     else
       @goal = @sum
     end
 
-      if @winlose=="You win!" or @winlose =="You lose!"
+      if @winlose=="YOU WIN!" or @winlose =="YOU LOSE."
         render "dicewinlose"
       else
         render "dicefirst"
@@ -59,15 +59,15 @@ class DicegameController < ApplicationController
 
     if @sum != 7
       if @sum==@goal
-        @winlose = "You win!"
+        @winlose = "YOU WIN!"
       end
     else if @sum==7
-      @winlose = "You lose!"
+      @winlose = "YOU LOSE."
     end
   end
 
 
-    if @winlose=="You win!" or @winlose =="You lose!"
+    if @winlose=="YOU WIN!" or @winlose =="YOU LOSE."
       render "dicewinlose"
     else
       render "dice"
