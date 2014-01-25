@@ -55,7 +55,7 @@ class DicegameController < ApplicationController
     @sum=@dice.sum
 
    
-    @goal =  params['goal']
+    @goal =  params['goal'].to_i
 
     if @sum != 7
       if @sum==@goal
