@@ -4,9 +4,6 @@ Dice::Application.routes.draw do
   get("/dicegamefirst", { :controller => "dicegame", :action => "show_dice_first"})
   get("/dicegame", { :controller => "dicegame", :action => "show_dice"})
 
-  #get("/dicegamefirstroll", { :controller => "dicegamefirstroll", :action => "show_dice1"})
-
-
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
