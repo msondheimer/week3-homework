@@ -1,4 +1,5 @@
 <body>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 <h1>Dice Game</h1>
 
 <% @dice.each do |die|%>
@@ -7,9 +8,14 @@
 <p>You rolled a <%= @sum%></p>
 <p><%= @winlose%></p>
 
-<form method="routes.rb" action='dicegamefirst'>
-<input type="submit" value="Start Over">
-</form>
+<p>
+	<form method="routes.rb" action="dicegamefirst" >
+	<button type="submit" class="btn btn-primary btn-lg" >Start Over</button>
+	</form>
+</p>
+
+
+
 </body>
 
 
