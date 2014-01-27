@@ -1,8 +1,17 @@
 h1 {color: black;
 	font-size: 36px;
-	border-bottom: solid;}
+    font-family: 'Arial';
+	border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #C0C0C0 ;}
 
-body{font-family: 'Arial'}
+h2{font-family: 'Arial';}
+
+body{font-family: 'Arial';
+    padding-left: 10px;}
+
+p{font-size: 20px;}
+li{font-size: 18px;}
 
 .submit{font-family: 'Arial'
 }
