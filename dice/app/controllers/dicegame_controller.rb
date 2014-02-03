@@ -42,14 +42,7 @@ class DicegameController < ApplicationController
   def show_dice
     
     die =[rand(1..6), rand(1..6), rand(1..6), rand(1..6), rand(1..6), rand(1..6)]
-    # number_of_dice = params["number"]
-
-    # if number_of_dice == nil
-    #    number_of_dice = 2
-    # end
-
-    # @dice = die.sample(number_of_dice.to_i)
-    #die=[rand(1..6)],rand(1..6)]
+    
     @dice = die.sample(2.to_i)
 
     @sum=@dice.sum
